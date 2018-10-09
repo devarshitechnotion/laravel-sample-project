@@ -21,5 +21,8 @@ Route::get('/admin', 'Admin@index');
 
 Route::get('/tasks', 'Tasks@index');
 
+//Route::get('/tasks', 'Tasks@remainingTask');
+
+
 Route::get('/tasks/{id}', 'Tasks@taskDetail');
 

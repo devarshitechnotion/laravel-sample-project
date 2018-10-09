@@ -7,6 +7,13 @@
 
         <title>Laravel</title>
 
+        <!-- CSS Files -->
+        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+
+        <!-- JS Files -->
+        <script src="{{asset('js/jquery-3.3.1.min.js')}}" ></script>
+        <script src="{{asset('js/bootstrap.min.js')}}" ></script>
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
@@ -67,13 +74,16 @@
     <body>
         <div class="flex-center"><h3>Details of your task</h3></div>       
             <div class="container" style="border:2px solid black;width:500px;height:400px;margin-left: 33%;
-    padding-left: 30px;">                
-                <!-- {{$tasksDetail}}  -->
+    padding-left: 30px;"> 
+                <div>
+                    <!-- {{$tasksDetail}}  -->
                 @foreach ($tasksDetail as $taskDetail)
                     <p><strong>Task Name: {{$taskDetail->task_name}}</strong></p>
                     <p><strong>Description: {{$taskDetail->description}}</strong></p>
                     <p><strong>Created on: {{date('d-m-Y',strtotime($taskDetail->created_at))}}</strong></p> 
-                @endforeach                  
+                @endforeach  
+                </div>               
+                                
             </div>
          
             <!-- <div class="content">

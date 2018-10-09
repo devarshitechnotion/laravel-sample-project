@@ -5,7 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Task Manager</title>
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+
+        <!-- JS Files -->
+        <script src="{{asset('js/jquery-3.3.1.min.js')}}" ></script>
+        <script src="{{asset('js/bootstrap.min.js')}}" ></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -14,7 +21,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #000;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -67,14 +74,14 @@
     <body>
         <div class="flex-center"><h3>Hello, This is my first custom laravel page.</h3></div>
        
-            <div class="content">
-                Hello {{$user}}
+            <div class="container">
+                <p>Hello {{$user}}
                 This is a new page created by me. And now every time this page is open first.because I set this page as a default page.Using web.php file in routes folder.
-                In web.php file we can set default view or default controller for our project.
-               
+                In web.php file we can set default view or default controller for our project.</p>
             </div>
-            <div class="content">
-                <a href="{{url('/tasks')}}"><button class="btn btn default">View Tasks</button></a>
+            <br>
+            <div class="container">
+                <a href="{{url('/tasks')}}"><button class="btn btn default success">View Tasks</button></a>
             </div>
         </div>
     </body>

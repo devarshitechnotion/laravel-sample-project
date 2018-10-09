@@ -20,7 +20,9 @@ class Tasks extends Controller
     {
         //$tasks = DB::table('tasks')->get();      this is done using query builder
         $allTasks = $this->taskModel->getAllTasks();      //calling model function
-        return view('tasks',['allTasks'=>$allTasks]);
+        $completedTasks = $this->taskModel->getCompletedTasks();
+        $remainingTasks = $this->taskModel->getRemainingTasks();
+        return view('tasks/tasks',['allTasks'=>$allTasks,'completedTasks'=>$completedTasks,'remainingTasks'=>$remainingTasks]);        
     }
 
     public function taskDetail($id)
@@ -29,6 +31,20 @@ class Tasks extends Controller
        // $taskDetail = DB::table('tasks')->where('id', $id)->get(); //get task details by task id
         $taskDetail = $this->taskModel->getTaskDetail($id);
         //return $tasks;exit;
-        return view('tasksDetail', ['tasksDetail' => $taskDetail]);
+        return view('tasks/tasksDetail', ['tasksDetail' => $taskDetail]);
+    }
+
+    public function completedTask()
+    {
+        $taskDetail = $this->taskModel->getCompletedTasks();
+        die($taskDetail);
+        return view('tasks/tasks', ['completedTasks' => $taskDetail]);
+    }
+
+    public function remainingTask()
+    {
+        $taskDetail = $this->taskModel->getRemainingTasks();
+        //die($taskDetail);
+        return view('tasks/tasks', ['remainingTasks' => $taskDetail]);
     }
 }

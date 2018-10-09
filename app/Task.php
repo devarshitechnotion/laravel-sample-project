@@ -18,4 +18,16 @@ class Task extends Model
     	$taskDetail = Task::where('id','=',$id)->get();
     	return $taskDetail;
     }
+
+    function getCompletedTasks()
+    {
+        $tasks = Task::where('is_completed', '=',1)->get();//this means SELECT * FROM tasks where is_completed = 1
+        return $tasks;
+    }
+
+    function getRemainingTasks()
+    {
+        $tasks = Task::where('is_completed', '=',0)->get();//this means SELECT * FROM tasks where is_completed = 0
+        return $tasks;
+    }
 }
