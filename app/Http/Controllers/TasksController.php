@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;     //include databse to perform Query Builders
 use App\Task;   //include Task Model
 
-class Tasks extends Controller
+class TasksController extends Controller
 {
     public function __construct()
     {

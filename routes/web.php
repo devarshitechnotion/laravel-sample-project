@@ -19,10 +19,10 @@ Route::get('/', 'Hello@index');
 
 Route::get('/admin', 'Admin@index');
 
-Route::get('/tasks', 'Tasks@index');
+Route::get('/tasks', 'TasksController@index');
 
 //Route::get('/tasks', 'Tasks@remainingTask');
 
 
-Route::get('/tasks/{id}', 'Tasks@taskDetail');
+Route::get('/tasks/{id}', 'TasksController@taskDetail');
 
