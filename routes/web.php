@@ -26,3 +26,10 @@ Route::get('/tasks', 'TasksController@index');
 
 Route::get('/tasks/{id}', 'TasksController@taskDetail');
 
+Route::get('/summary', 'SummaryController@index');
+
+Route::get('/summary/create', 'SummaryController@create');
+
+
+
+
