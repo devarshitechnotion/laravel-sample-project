@@ -30,6 +30,9 @@ Route::get('/summary', 'SummaryController@index');
 
 Route::get('/summary/create', 'SummaryController@create');
 
+Route::post('/summary/store', 'SummaryController@store');
+
+
 
 
 

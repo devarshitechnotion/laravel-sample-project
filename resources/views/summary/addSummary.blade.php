@@ -3,7 +3,9 @@
 	<h3>Add Summary</h3>
 	<hr>
 
-	<form action="summary/store">
+	<form method="POST" action="{{url('summary/store')}}">
+		
+		{{ csrf_field() }}
 
 	    <div class="form-group">
 	      <label for="email">Tittle:</label>
@@ -12,7 +14,7 @@
 
 	    <div class="form-group">
 	      <label for="pwd">Summary:</label>
-	      <textarea class="form-control" rows="5" id="pwd" placeholder="Enter summary" name="summary"></textarea>
+	      <textarea class="form-control" rows="5" id="summary" placeholder="Enter summary" name="summary"></textarea>
 	    </div>
 
 	    <button type="submit" class="btn btn-success">Submit</button>

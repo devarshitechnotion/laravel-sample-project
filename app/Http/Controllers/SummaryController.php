@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Summary;
 
 class SummaryController extends Controller
 {
@@ -11,11 +12,19 @@ class SummaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // public function __construct()
+    // {
+    //     $summaryModel = new Summary;
+    // }
+
     public function index()
     {
         // list all summary
+        $summaryModel = new Summary;
+        $data = $summaryModel::all();
 
-        return view('summary/showSummary');
+        return view('summary/showSummary',['summaryData'=>$data]);
     }
 
     /**
@@ -26,6 +35,7 @@ class SummaryController extends Controller
     public function create()
     {
         // display add summary form
+
         return view('summary/addSummary');
     }
 
@@ -37,7 +47,30 @@ class SummaryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //get post data
+        // $title = $request['title'];
+        // $body = $request['summary'];
+        //dd($request->all());     
+
+        //store data into database
+          //creating object of Summary model. must include use App\Summary in the beigning of this controller to use this. 
+        $summaryModel = new Summary;
+        $summaryModel->title = $request['title'];
+        $summaryModel->summary = $request['summary'];
+        //simply use save() function to add record into summaries table.
+        if($summaryModel->save())
+        {
+            echo "your summary added successfully";
+        }
+        else
+        {
+            echo "try again";
+        }
+
+        //redirect to display all summary page.
+
+
+
     }
 
     /**
