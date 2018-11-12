@@ -1,21 +1,15 @@
 @include('includes.header')
 	
-	<div class="row">
-		<div class="col-md-10">
-			<h3>List of All Summary	</h3>
-		</div>
-		<div class="col-md-2" style="margin-top: 10px;"">
-			<span align=right><a href="{{url('summary/create')}}"><button class="btn btn-primary">Add Summary</span></button></a></span>			
-		</div>
-	</div>	
+	<br><br><br>	
+	<h3>{{$summary->title}}</h3>
 	<hr>
 
-	<ul>
-		@foreach($summaryData as $summary)
-		<li>
-			{{$summary['summary'] }}
-		</li>
-		@endforeach
-	</ul>
+	<div class="">
+		
+		{{$summary->summary}}
+
+	</div>
+
+	
 
 @include('includes.footer')	  

@@ -22,8 +22,7 @@
 
   <body>
 
-    <header>
-      <!-- Fixed navbar -->
+    <!--  <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Brand Name</a>        
 
@@ -36,12 +35,48 @@
               <a class="nav-link" href="{{url('summary/')}}">Summary</a>
             </li>           
           </ul>
-         <!--  <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
+        
         </div>
       </nav>
+    </header>  -->
+
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="./" class="navbar-brand">Bootstrap Menu</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="{{url('tasks/')}}">Tasks 
+              </a>
+              <!-- <ul class="dropdown-menu">
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="{{url('summary/')}}">Summary</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li class="active">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="container"> 

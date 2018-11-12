@@ -1,5 +1,6 @@
 @include('includes.header')
 
+        <br><br><br>
         <div class="text-center"><h3>Always, Keep in  mind what you have to do today.</h3></div>        
 
         <div class="container h-100" style="border:2px solid black;width:500px;height:auto;margin-left: 29%;padding-left: 30px;">

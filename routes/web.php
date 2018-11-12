@@ -32,6 +32,11 @@ Route::get('/summary/create', 'SummaryController@create');
 
 Route::post('/summary/store', 'SummaryController@store');
 
+Route::get('/summary/{id}', 'SummaryController@show');
+
+
+
+
 
 
 

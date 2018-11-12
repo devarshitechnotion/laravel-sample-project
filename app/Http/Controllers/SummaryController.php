@@ -12,19 +12,16 @@ class SummaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    // public function __construct()
-    // {
-    //     $summaryModel = new Summary;
-    // }
+   
 
     public function index()
     {
         // list all summary
-        $summaryModel = new Summary;
-        $data = $summaryModel::all();
+        $data = Summary::latest('id')->get();     //to get all records from summaries table orger by id DESC . select *
+        //$summaryModel = new Summary;
+        //$data = $summaryModel::all();
 
-        return view('summary/showSummary',['summaryData'=>$data]);
+        return view('summary/showAllSummary',['summaryData'=>$data]);
     }
 
     /**
@@ -54,13 +51,16 @@ class SummaryController extends Controller
 
         //store data into database
           //creating object of Summary model. must include use App\Summary in the beigning of this controller to use this. 
-        $summaryModel = new Summary;
+
+
+        $summaryModel = new Summary;        
         $summaryModel->title = $request['title'];
         $summaryModel->summary = $request['summary'];
         //simply use save() function to add record into summaries table.
         if($summaryModel->save())
         {
-            echo "your summary added successfully";
+           // echo "your summary added successfully";
+           return redirect('/summary'); 
         }
         else
         {
@@ -82,6 +82,9 @@ class SummaryController extends Controller
     public function show($id)
     {
         //
+        //$summaryModel = new Summary;            
+        $summary = Summary:: find($id);
+        return view('summary.showSummary',compact('summary'));        
     }
 
     /**
@@ -90,9 +93,11 @@ class SummaryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         //
+        echo "hi";die;
+        return view('summary.editSummary');
     }
 
     /**

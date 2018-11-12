@@ -1,7 +1,7 @@
 @include('includes.header')
-	
+
 	<br><br><br>	
-	<h3>Add Summary</h3>
+	<h3>Edit Summary</h3>
 	<hr>
 
 	<form method="POST" action="{{url('summary/store')}}">
@@ -22,4 +22,5 @@
 
 	  </form>
 
-@include('includes.footer')	  
+@include('includes.footer')
+
