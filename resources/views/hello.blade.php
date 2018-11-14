@@ -72,12 +72,16 @@
         </style>
     </head>
     <body>
-        <div class="flex-center"><h3>Hello, This is my first custom laravel page.</h3></div>
+        <div class="flex-center"><h3>Welcome to your personal Task Manager.</h3></div>
        
             <div class="container">
-                <p>Hello {{$user}}
-                This is a new page created by me. And now every time this page is open first.because I set this page as a default page.Using web.php file in routes folder.
-                In web.php file we can set default view or default controller for our project.</p>
+                <p><h3><strong>What</strong></h3>Task management: Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking, and reporting. Task management can help either individual achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.</p>
+            </div>
+             <div class="container">
+                <p><h3><strong>Why</strong></h3>In essence, task management is deemed very important among executives because it helps them become more productive; it reduces the time allotted for setting priorities, encourages us to make use of the art of delegation, and enables us to differentiate from the four kinds of individual tasks which are: urgent and important; others are not urgent but important; there are those that are urgent but not important; and of course there are always those that are not urgent and not important.</p>
+            </div>
+             <div class="container">
+                <p><h3><strong>How</strong></h3>Task management: From managing simple to-do lists for individuals as well as to helping teams work and collaborate better, there are many other hidden features and our team actively working to add more .</p>
             </div>
             <br>
             <div class="container">
