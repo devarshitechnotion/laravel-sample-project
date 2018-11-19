@@ -68,9 +68,6 @@ class SummaryController extends Controller
         }
 
         //redirect to display all summary page.
-
-
-
     }
 
     /**
@@ -93,11 +90,12 @@ class SummaryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        echo "hi";die;
-        return view('summary.editSummary');
+        //echo "hi";die;
+        $summaryData = Summary:: find($id);
+        return view('summary.editSummary', compact('summaryData'));
     }
 
     /**
@@ -109,7 +107,19 @@ class SummaryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //        
+        $title = $request['title'];
+        $summary = $request['summary'];
+
+        $update = Summary:: find($id)->update(['title' => $title,'summary' => $summary]);
+        if($update)
+        {
+            return redirect('/summary');
+        }
+        else
+        {
+            return redirect('summary/edit/'.$id);
+        }
     }
 
     /**

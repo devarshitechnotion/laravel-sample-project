@@ -13,4 +13,6 @@ class Summary extends Model
 
 	//if our table does not contain created_at , updated_at fields set bellow variable as false. by default it is true.
     public $timestamps = false;
+
+    protected $fillable = ['title','summary'];
 }
