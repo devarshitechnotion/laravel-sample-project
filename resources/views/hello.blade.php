@@ -73,7 +73,10 @@
     </head>
     <body>
         <div class="flex-center"><h3>Welcome to your personal Task Manager.</h3></div>
-       
+            <div class="container">                
+                    <img class="img-responsive"
+                    src="/images/content/taskm.jpg" alt="">                
+            </div>
             <div class="container">
                 <p><h3><strong>What</strong></h3>Task management: Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking, and reporting. Task management can help either individual achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.</p>
             </div>
