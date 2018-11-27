@@ -15,7 +15,15 @@
 
 		
 	@foreach($summaryData as $summary)
-		<h4><a href="{{url('summary/'.$summary['id'])}}">{{$summary['title'] }}</a></h4>
+		<h4>
+			<p>
+				<a href="{{url('summary/'.$summary['id'])}}" >{{$summary['title'] }}</a>
+			
+				<a href="{{url('summary/edit/'.$summary['id'])}}" title="edit summary">
+	          		<span class="glyphicon glyphicon-pencil"></span>
+	        	</a>
+        	</p>
+		</h4>
 	@endforeach
 	
 
