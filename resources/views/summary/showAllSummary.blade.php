@@ -22,6 +22,10 @@
 				<a href="{{url('summary/edit/'.$summary['id'])}}" title="edit summary">
 	          		<span class="glyphicon glyphicon-pencil"></span>
 	        	</a>
+
+	        	<a href="{{url('summary/delete/'.$summary['id'])}}" title="delete summary">
+	          		<span class="glyphicon glyphicon-remove-sign"></span>
+	        	</a>
         	</p>
 		</h4>
 	@endforeach

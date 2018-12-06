@@ -15,7 +15,7 @@
     return view('hello');
 }); */
 
-Route::get('/', 'Hello@index');
+Route::get('/', 'HelloController@index');
 
 Route::get('/admin', 'Admin@index');
 
@@ -32,11 +32,15 @@ Route::get('/summary/create', 'SummaryController@create');
 
 Route::post('/summary/store', 'SummaryController@store');
 
+
 Route::get('/summary/edit/{id}', 'SummaryController@edit');
 
 Route::get('/summary/{id}', 'SummaryController@show');
 
 Route::post('/summary/edit/{id}', 'SummaryController@update');
+
+Route::get('/summary/delete/{id}', 'SummaryController@destroy');
+
 
 
     

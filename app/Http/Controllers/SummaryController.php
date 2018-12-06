@@ -51,6 +51,10 @@ class SummaryController extends Controller
 
         //store data into database
           //creating object of Summary model. must include use App\Summary in the beigning of this controller to use this. 
+        $validateData = $request->validate([
+            'title' => 'required|unique:summaries',
+            'summary' => 'required',
+            ]);
 
 
         $summaryModel = new Summary;        
@@ -131,5 +135,7 @@ class SummaryController extends Controller
     public function destroy($id)
     {
         //
+        $delete = Summary:: destroy($id);
+        return back();
     }
 }

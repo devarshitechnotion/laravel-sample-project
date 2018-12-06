@@ -3,6 +3,12 @@
 	<br><br><br>	
 	<h3>Add Summary</h3>
 	<hr>
+	
+	<!--Form errors section  -->
+	
+	@include('includes.validation_errors')
+
+	<!-- End of form errors -->
 
 	<form method="POST" action="{{url('summary/store')}}">
 		
